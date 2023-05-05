@@ -2,10 +2,13 @@
 
 // console.log(global);
 
-setTimeout(() => {
-  clearInterval(int);
-}, 3000);
+// setTimeout(() => {
+//   clearInterval(int);
+// }, 3000);
 
-const int = setInterval(() => {
-  console.log("interval");
-}, 1000);
+// const int = setInterval(() => {
+//   console.log("interval");
+// }, 1000);
+
+console.log(__dirname);
+console.log(__filename);
