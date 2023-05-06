@@ -92,3 +92,18 @@ textarea {
   font-size: 1.2em;
   cursor: pointer;
 }
+.details_content {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  color: #fff;
+  background: crimson;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}
