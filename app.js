@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 
 const blogRoutes = require("./routes/blogRoutes");
+const aboutRoutes = require("./routes/aboutRoutes");
 
 // express app
 const app = express();
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
 app.use(morgan("dev"));
 
 app.use(blogRoutes);
+app.use(aboutRoutes);
 
 // mongoose and mongo sandbox routes
 
@@ -50,10 +52,6 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
   res.redirect("/blogs");
-});
-
-app.get("/about", (req, res) => {
-  res.render("about", { title: "About" });
 });
 
 // 404 page
