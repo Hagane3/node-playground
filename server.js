@@ -13,18 +13,22 @@ const server = http.createServer((req, res) => {
   switch (req.url) {
     case "/":
       path += "index.html";
+      res.statusCode = 200;
       break;
     case "/contact":
       path += "contact.html";
+      res.statusCode = 200;
       break;
     default:
       path += "404.html";
+      res.statusCode = 404;
       break;
   }
 
   fs.readFile(path, (err, data) => {
     if (err) {
       console.log(err);
+
       res.end();
     } else {
       // res.write(data);
