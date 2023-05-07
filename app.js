@@ -1,12 +1,15 @@
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const blogRoutes = require("./routes/blogRoutes");
 const aboutRoutes = require("./routes/aboutRoutes");
 
 // express app
 const app = express();
+
+app.use(cors());
 
 // connect to mongodb
 

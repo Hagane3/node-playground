@@ -47,7 +47,12 @@ const blog_delete = (req, res) => {
 
 const blog_api = (req, res) => {
   Blog.find()
-    .then((result) => res.json(result))
+    .then((result) =>
+      res.json([
+        { id: 1, name: "user1" },
+        { id: 2, name: "user2" },
+      ])
+    )
     .catch((err) => console.log(err));
 };
 
